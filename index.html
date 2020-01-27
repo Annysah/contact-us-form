@@ -63,8 +63,55 @@
 
         input{
             height: 30px;
+            transition: height 2s ease-in;
+        }
+        
+        input:hover {
+            height: 45px;
+        }
+            
+        input:focus {
+            animation: input 2s ease-in-out 1;
         }
 
+            @keyframes input {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+                background-color: transparent;
+                color: white; 
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+                background-color: green;
+                color: white;
+            }
+            100% {
+                transform: scale(1.0);
+                background-color: transparent;
+                opacity: 1;
+            }
+        }@keyframes input {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+                background-color: transparent;
+                color: white; 
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+                background-color: green;
+                color: white;
+            }
+            100% {
+                transform: scale(1.0);
+                background-color: transparent;
+                opacity: 1;
+            }
+        }
+            
         form .submit{
         background: green;
         border-radius: 10px 10px 10px 10px;
@@ -79,11 +126,25 @@
         form .submit:hover{
             background-color: rgb(224, 49, 49);
             cursor: pointer;
+            animation: submit 4s ease-in-out;
         }
-
+            
+        @keyframes submit {
+            0% {
+                background-color: green;
+            }
+            60% {
+                background-color: teal;
+            }
+            100% {
+                background-color: green;
+            }
+        }
+            
         p{
             color: whitesmoke;
         }
+            
         </style>
     </head>
     <body>
